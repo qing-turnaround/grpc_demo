@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "./proto;proto";
+
+service HelloWorld {
+  rpc SendMessage(Request) returns (Response) {}
+}
+
+message Request {
+    string sendName = 1;
+    string message = 2;
+}
+
+message Response {
+  string receiveName = 1;
+  string message = 2;
+}
+
